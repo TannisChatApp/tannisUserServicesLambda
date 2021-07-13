@@ -17,7 +17,7 @@ export class App {
         this.exp_app.use(express.urlencoded({ extended: true }));
         this.exp_app.use(cookieParser());
         this.exp_app.use(express.static(path.join(path.resolve(__dirname, '..'), 'public')));
-        this.exp_app.use('/api', indexRouter);
+        this.exp_app.use('/tannisUserServices', indexRouter);
         this.exp_app.use((req: Request, res: Response, next: NextFunction) => {
             next(createError(404));
         });

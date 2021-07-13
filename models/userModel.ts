@@ -28,7 +28,6 @@ export class User {
             "creationDate" : this.creationDate
         }));
     }
-    pre
     public setSlNo (slno: string): void { this.slno = slno; }
     public setUid (uid: string): void { this.uid = uid; }
     public setFirstName (firstName: string): void { this.firstName = firstName; }
