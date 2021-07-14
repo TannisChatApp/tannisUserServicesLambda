@@ -1,8 +1,6 @@
 import { Router } from 'express';
 import { scanUsersTable, queryUsersTable, insertRecordInUsersTable } from '../services/apiService';
 
-
-// User-route
 const underlyingRouter = Router();
 underlyingRouter.post('/scan', scanUsersTable);
 underlyingRouter.post('/query', queryUsersTable);

@@ -17,8 +17,8 @@ export class User {
     public getPhoneNumber (): string { return (this.phoneNumber); }
     public getPasswordHash (): string { return (this.passwordHash); }
     public getCreationDate (): string { return (this.creationDate); }
-    public getJsonString (): string {
-        return (JSON.stringify({
+    public getDBJsonItem (): object {
+        return ({
             "slno": this.slno,
             "uid": this.uid,
             "firstName": this.firstName,
@@ -26,7 +26,7 @@ export class User {
             "email": this.email,
             "phoneNumber": this.phoneNumber,
             "creationDate" : this.creationDate
-        }));
+        });
     }
     public setSlNo (slno: string): void { this.slno = slno; }
     public setUid (uid: string): void { this.uid = uid; }
