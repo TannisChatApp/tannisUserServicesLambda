@@ -9,7 +9,8 @@ export class User {
         private passwordHash: string,
         private creationDate: string
     ) { }
-    public getSlo (): string { return (this.slno); }
+
+    public getSlno (): string { return (this.slno); }
     public getUid (): string { return (this.uid); }
     public getFirstName (): string { return (this.firstName); }
     public getLastName (): string { return (this.lastName); }
@@ -19,16 +20,17 @@ export class User {
     public getCreationDate (): string { return (this.creationDate); }
     public getDBJsonItem (): object {
         return ({
-            "slno": this.slno,
-            "uid": this.uid,
-            "firstName": this.firstName,
-            "lastName": this.lastName,
-            "email": this.email,
-            "phoneNumber": this.phoneNumber,
-            "creationDate" : this.creationDate
+            "sl_no": this.slno,
+            "u_id": this.uid,
+            "u_first_name": this.firstName,
+            "u_last_name": this.lastName,
+            "u_eml": this.email,
+            "u_pno": this.phoneNumber,
+            "creation_date": this.creationDate
         });
     }
-    public setSlNo (slno: string): void { this.slno = slno; }
+
+    public setSlno (slno: string): void { this.slno = slno; }
     public setUid (uid: string): void { this.uid = uid; }
     public setFirstName (firstName: string): void { this.firstName = firstName; }
     public setLastName (lastName: string): void { this.lastName = lastName; }

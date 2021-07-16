@@ -6,7 +6,6 @@ underlyingRouter.post('/scan', scanUsersTable);
 underlyingRouter.post('/query', queryUsersTable);
 underlyingRouter.put('/put', insertRecordInUsersTable);
 
-
 const baseApiRouter = Router();
 baseApiRouter.use('/api', underlyingRouter);
 export default baseApiRouter;
