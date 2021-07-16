@@ -23,11 +23,11 @@ export class DB {
     private setCommonOptsForScanAndQueryTasks (queryObj: StdQueryObj, indexChoice: number): object {
         let docRequestParams: any = {
             TableName: this.tableName,
-            ProjectionExpression: queryObj.req_col_patt,
+            ProjectionExpression: queryObj.col_patt,
             ExpressionAttributeValues: queryObj.cond_attrs_obj
         };
         if (indexChoice !== undefined) { docRequestParams['IndexName'] = this.tableIndexes[indexChoice]; }
-        
+        return docRequestParams;
     }
 
     public async runScan (queryObj: StdQueryObj, indexChoice: number): Promise<dynamoDbTannisUserEntry[]|Error> {

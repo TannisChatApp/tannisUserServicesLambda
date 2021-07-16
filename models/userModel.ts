@@ -9,7 +9,7 @@ export class User {
         private passwordHash: string,
         private creationDate: string
     ) { }
-    public getSlNo (): string { return (this.slno); }
+    public getSlo (): string { return (this.slno); }
     public getUid (): string { return (this.uid); }
     public getFirstName (): string { return (this.firstName); }
     public getLastName (): string { return (this.lastName); }
